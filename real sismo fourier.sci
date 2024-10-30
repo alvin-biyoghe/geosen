@@ -1,20 +1,9 @@
 clear;
 clf();
-// LICENCE ST, module sur méthodes numériques. TP FOURIER.
-//
 // Ce programme cree un signal sinusoidal 1D qui contient 
 // deux periodes T1 et T2, d'amplitudes respectives A1 et A2 :
 //
 // sig(t) = A1 sin(2*pi*t/T1) + A2 sin(2*pi*t/T2).
-//
-// Compléter le programme ci-dessous.
-//
-// Exercices intermediaires: 
-//		1. Rapprocher T1 et T2 pour voir la limite
-//                de resolution spectrale.
-//             	2. jouer sur le pas d'echantillonage pour voir l'effet du 
-//                sous-echantillonage sur le spectre (aliasing).
-//		3. Calculer le spectre du signal.
 //
 //  Creation du signal
 sismo= read('RealSismoAlu.dat',-1,2)
@@ -30,7 +19,6 @@ style=[1];
 plot2d(t,sig,style);   
 
 // Transformation de Fourier
-// CONSTRUIRE : 
 Tsig= fft(sig,-1)// Tsig : T.F. de sig
 mTsig=abs(Tsig)// mTsig: spectre d'amplitude de Tsig
 // frequence : tableau des frequences discretes de sig
